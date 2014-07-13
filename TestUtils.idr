@@ -23,4 +23,4 @@ testFunction : (Eq b, Show b) => (a -> b) -> Vect n (Pair a b) -> String
 testFunction f testCases = let inputs = map fst testCases in
   let expectedOutputs = map snd testCases in
   let results = map f inputs in
-  concatStrs $ zipWith testOutcome results expectedOutputs
+  concatStrs $ zipWith testOutcome expectedOutputs results
